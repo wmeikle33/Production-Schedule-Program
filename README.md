@@ -22,6 +22,14 @@ Because the full codebase and rules are proprietary, this project serves as a **
 
 ---
 
+## Prerequesites
+
+Python version (e.g. Python 3.11+)
+OS assumptions if any (works on macOS/Linux/Windows)
+Optional: Git, pip, virtualenv if you want to be very hand-holdy.
+
+---
+
 ## What this sample demonstrates
 
 At a high level, the sample code focuses on:
