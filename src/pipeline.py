@@ -1,4 +1,4 @@
-def run_pipeline(day_2, total_list):
+def pipeline(day_2, total_list):
     if marker == 'O':
         if sum(total_list) < a:
             if int(sum(total_list) + int(min((df.loc[i,'Column'],new_list[i-1])))) == a:
