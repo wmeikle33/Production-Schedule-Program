@@ -21,3 +21,4 @@ def pipeline(day_2, total_list, market, a, new_list):
                 else:
                     df.loc[i,str(day_2 + 6)] = a - sum(total_list)
                     total_list.append(df.loc[i,str(day_2 + 6)])
+    return total_list
