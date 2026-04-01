@@ -2,7 +2,7 @@ import dataclass
 
 @dataclass
 class ProgramConfig:
-    date: 
+    date: str
     value_list: List
     new_values: List
     marker:str
