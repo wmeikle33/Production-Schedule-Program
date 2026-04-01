@@ -7,7 +7,7 @@ from pathlib import Path
 import typer
 from rich import print
 
-app = typer.Typer(add_completion=False, help="Thesis Webscraper CLI")
+app = typer.Typer(add_completion=False, help="Production Scheduling Program CLI")
 
 @app.command()
 def run(
@@ -15,8 +15,6 @@ def run(
 ):
 
     print("[bold green]Done![/bold green]")
-    print(f"Posts: {result.posts_count}")
-    print(f"Comments: {result.comments_count}")
     print(f"Output: {out_dir.resolve()}")
 
     summary_path = out_dir.parent / "run_summary.json"
