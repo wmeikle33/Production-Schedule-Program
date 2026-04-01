@@ -1,4 +1,6 @@
-def pipeline(day, value_list, marker, max_sum, new_values):
+from .config import ProgramConfig
+
+def pipeline(ctr:ProgramConfig):
     if marker == 'O':
         if sum(value_list) < a:
             if int(sum(value_list) + int(min((df.loc[i,'Column'],new_values[i-1])))) == a:
