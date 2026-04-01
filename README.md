@@ -35,7 +35,10 @@ Optional: Git, pip, virtualenv if you want to be very hand-holdy.
 ```bash
 
 production-scheduler run \
-  --pages 10 \
+  --value_list \
+  --date \
+  --new_values \
+  --marker \
 
 ```
 
