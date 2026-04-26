@@ -17,13 +17,8 @@ def run(
     value_list: list = typer.Option(..., "--value_list", help="Values for Production Program"),
     date: str = typer.Option(1, "--date", help="Date"),
     new_values: list = typer.Option(..., "--value_list", help="New Values for Production Program"),
-    out_dir: Path = typer.Option(Path("data/"), "--out-dir", help="Output file path"),
 ):
     print("[bold green]Done![/bold green]")
-    print(f"Output: {out_dir.resolve()}")
-
-    summary_path = out_dir.parent / "run_summary.json"
-    summary_path.write_text(json.dumps(result.to_dict(), indent=2), encoding="utf-8")
 
 
 def main():
