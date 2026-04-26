@@ -16,7 +16,7 @@ app = typer.Typer(add_completion=False, help="Production Scheduling Program CLI"
 def run(
     out_dir: Path = typer.Option(Path("data/"), "--out-dir", help="Output file path"),
 ):
-
+    run_pipeline
     print("[bold green]Done![/bold green]")
     print(f"Output: {out_dir.resolve()}")
 
