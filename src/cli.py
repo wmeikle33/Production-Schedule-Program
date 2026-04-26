@@ -16,7 +16,8 @@ app = typer.Typer(add_completion=False, help="Production Scheduling Program CLI"
 def run(
     value_list: list = typer.Option(..., "--value_list", help="Values for Production Program"),
     date: str = typer.Option(1, "--date", help="Date"),
-    new_values: list = typer.Option(..., "--value_list", help="New Values for Production Program"),
+    new_values: list = typer.Option(..., "--new_values", help="New Values for Production Program"),
+    market: str = typer.Option(..., "--marker", help="Marker"),
 ):
     print("[bold green]Done![/bold green]")
 
