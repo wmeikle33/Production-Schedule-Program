@@ -14,8 +14,8 @@ app = typer.Typer(add_completion=False, help="Production Scheduling Program CLI"
 
 @app.command()
 def run(
-    section: str = typer.Option(..., "--section", help="Autohome section to scrape"),
-    pages: int = typer.Option(1, "--pages", min=1, help="Number of list pages to crawl"),
+    value_list: str = typer.Option(..., "--value_list", help="Values for Production Program"),
+    date: str = typer.Option(1, "--date", help="Date"),
     out_dir: Path = typer.Option(Path("data/"), "--out-dir", help="Output file path"),
 ):
     run_pipeline
