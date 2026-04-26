@@ -19,6 +19,7 @@ def run(
     new_values: list = typer.Option(..., "--new_values", help="New Values for Production Program"),
     market: str = typer.Option(..., "--marker", help="Marker"),
 ):
+    run_pipeline()
     print("[bold green]Done![/bold green]")
 
 
