@@ -14,8 +14,9 @@ app = typer.Typer(add_completion=False, help="Production Scheduling Program CLI"
 
 @app.command()
 def run(
-    value_list: str = typer.Option(..., "--value_list", help="Values for Production Program"),
+    value_list: list = typer.Option(..., "--value_list", help="Values for Production Program"),
     date: str = typer.Option(1, "--date", help="Date"),
+    new_values: list = typer.Option(..., "--value_list", help="Values for Production Program"),
     out_dir: Path = typer.Option(Path("data/"), "--out-dir", help="Output file path"),
 ):
     print("[bold green]Done![/bold green]")
