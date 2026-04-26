@@ -8,7 +8,7 @@ import typer
 from rich import print
 from .config import ProgramConfig
 from .models import ProgramResult
-from .pipeline import run_pipeline
+from .pipeline import pipeline
 
 app = typer.Typer(add_completion=False, help="Production Scheduling Program CLI")
 
