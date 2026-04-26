@@ -18,7 +18,6 @@ def run(
     date: str = typer.Option(1, "--date", help="Date"),
     out_dir: Path = typer.Option(Path("data/"), "--out-dir", help="Output file path"),
 ):
-    run_pipeline
     print("[bold green]Done![/bold green]")
     print(f"Output: {out_dir.resolve()}")
 
