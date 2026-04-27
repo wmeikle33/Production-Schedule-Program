@@ -1,26 +1,40 @@
-# src/production-schedule-program/cli.py
 from __future__ import annotations
-
-import json
-from pathlib import Path
 
 import typer
 from rich import print
+
 from .config import ProgramConfig
-from .models import ProgramResult
 from .pipeline import pipeline
 
 app = typer.Typer(add_completion=False, help="Production Scheduling Program CLI")
 
+
 @app.command()
 def run(
-    value_list: list = typer.Option(..., "--value_list", help="Values for Production Program"),
-    date: str = typer.Option(1, "--date", help="Date"),
-    new_values: list = typer.Option(..., "--new_values", help="New Values for Production Program"),
-    market: str = typer.Option(..., "--marker", help="Marker"),
+    value_list: list[str] = typer.Option(
+        ..., "--value-list", help="Values for Production Program"
+    ),
+    date: str = typer.Option(
+        ..., "--date", help="Production date"
+    ),
+    new_values: list[str] = typer.Option(
+        ..., "--new-values", help="New values for Production Program"
+    ),
+    market: str = typer.Option(
+        ..., "--market", help="Market"
+    ),
 ):
-    run_pipeline(ctr:ProgramConfig)
+    config = ProgramConfig(
+        value_list=value_list,
+        date=date,
+        new_values=new_values,
+        market=market,
+    )
+
+    result = pipeline(config)
+
     print("[bold green]Done![/bold green]")
+    print(result)
 
 
 def main():
@@ -28,4 +42,3 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
