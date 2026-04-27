@@ -6,3 +6,5 @@ name = "schedulerx"
 version = "0.1.0"
 requires-python = ">=3.9"
 dependencies = ["python-dateutil>=2.8.2"]
+[project.scripts]
+production-schedule = "production_schedule_program.cli:main"
